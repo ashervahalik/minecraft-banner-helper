@@ -2,6 +2,8 @@
 
 For Minecrafters who like to make banners, this simple tool helps to generate `/give` commands.
 
+Go to the page [here](https://ashervahalik.github.io/minecraft-banner-helper).
+
 ### Lookup
 
 In Minecraft, the patterns used to make a loom have names. Often, these are confusing for people to remember, so there is a dropdown chart at the top displaying the pattern name with the asset ID, which describes the pattern's shape. For example, "lozenge" translates to "rhombus."
