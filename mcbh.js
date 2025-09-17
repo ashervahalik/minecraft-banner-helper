@@ -42,7 +42,6 @@ const patterns = {
 	"gradient": "gradient",
 	"base gradient": "gradient_up"
 }
-
 const colors = [
 	"white",
 	"light gray",
@@ -61,7 +60,6 @@ const colors = [
 	"magenta",
 	"pink"
 ]
-
 function lookupSubmit() {
 	let patLookup = document.getElementById('lookup').value;
 	let output = document.getElementById('lookupResult');
@@ -72,10 +70,8 @@ function lookupSubmit() {
 		output.innerHTML = "Invalid pattern.";
 	}
 }
-
 var genCommand = "/give @p ";
 let patternList = document.getElementById('patternList');
-
 function setBase() {
 	let baseCol = document.getElementById('baseColor').value;
 	let errs = document.getElementById('errHandleBase');
@@ -91,7 +87,6 @@ function setBase() {
 	}
 	document.getElementById('baseColor').value = "";
 }
-
 function addPattern() {
 	let pattern = document.getElementById('patName').value;
 	let color = document.getElementById('patColor').value;
@@ -108,7 +103,6 @@ function addPattern() {
 	document.getElementById('patName').value = "";
 	document.getElementById('patColor').value = "";
 }
-
 function finishCommand() {
 	console.log(patternList);
 	genCommand += "]]";
@@ -118,14 +112,14 @@ function finishCommand() {
 		final.innerHTML += "<br/>&#x25c6 This command's too long to run in chat. Use a command block to execute.";
 	}
 }
-
 function genTable() {
 	var table = document.getElementById('patternTable');
 	for ([pattern,assetId] of Object.entries(patterns)) {
 		table.innerHTML += "<tr><td>" + pattern + "</td><td>" + assetId + "</td></tr>";
 	}
 }
-
-
-
-
+// Comment out this function after testing
+/* function test() {
+	let test = document.getElementById('generatedCommand');
+	test.innerHTML = "Test:<br/><code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</code>";
+} */

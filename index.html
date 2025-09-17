@@ -6,27 +6,29 @@
 		<meta charset='utf-8'/>
 	</head>
 	<body onload='genTable()'>
-		<h1><a href='/'>Asher's</a> Minecraft Banner Helper</h1>
-		<p id='toreadme'>Read the <a href='https://github.com/ashervahalik/minecraft-banner-helper'>README</a></p>
-		<p>&#x25c6; Make sure all your inputs are lowercase!</p>
-		<h2>Lookup</h2>
-		<details>
-			<summary>Patterns</summary>
-			<p>The asset ID of the respective pattern describes what the pattern looks like, so if you're not familiar with the pattern names, this table can help you identify which pattern does what.</p>
-			<table id='patternTable'>
-				<tr>
-					<th>Pattern (Loom)</th>
-					<th>Asset ID (Command)</th>
-				</tr>
-			</table>
-		</details>
-		<h2>Create</h2>
-		<p>Input your parameters and have a /give command generated.</p>
-		<p><input type='text' id='baseColor' placeholder='Base color' value=''/> <button onclick='setBase()'>Set base color</button> <span id='errHandleBase'></span></p>
-		<p><input type='text' id='patName' placeholder='Pattern name (NOT asset ID)' value=''/> <input type='text' id='patColor' placeholder='Pattern color' value=''/> <span id='errHandlePattern'></span></p>
-		<p><button onclick='addPattern()'>Add pattern</button></p>
-		<p id='patternList'></p>
-		<p><button onclick='window.open("./index.html","_self")'>Reset</button> <button onclick='finishCommand()'>Finish</button></p>
+		<div class='main'>
+			<h1><a href='/'>Asher's</a> Minecraft Banner Helper</h1>
+			<p id='toreadme'>Read the <a href='https://github.com/ashervahalik/minecraft-banner-helper'>README</a></p>
+			<p>&#x25c6; Make sure all your inputs are lowercase!</p>
+			<h2>Lookup</h2>
+			<details>
+				<summary>Patterns</summary>
+				<p>The asset ID of the respective pattern describes what the pattern looks like, so if you're not familiar with the pattern names, this table can help you identify which pattern does what.</p>
+				<table id='patternTable'>
+					<tr>
+						<th>Pattern (Loom)</th>
+						<th>Asset ID (Command)</th>
+					</tr>
+				</table>
+			</details>
+			<h2>Create</h2>
+			<p>Input your parameters and have a /give command generated.</p>
+			<p><input type='text' id='baseColor' placeholder='Base color' value=''/> <button onclick='setBase()'>Set base color</button> <span id='errHandleBase'></span></p>
+			<p><input type='text' id='patName' placeholder='Pattern name (NOT asset ID)' value=''/> <input type='text' id='patColor' placeholder='Pattern color' value=''/> <span id='errHandlePattern'></span></p>
+			<p><button onclick='addPattern()'>Add pattern</button></p>
+			<p id='patternList'></p>
+			<p><button onclick='window.open("./index.html","_self")'>Reset</button> <button onclick='finishCommand()'>Finish</button></p>
+		</div>
 		<p id='generatedCommand'></p>
 	</body>
 </html>
@@ -34,43 +36,38 @@
 <script src='./mcbh.js' type='application/javascript'></script>
 
 <style>
-
-	body {
+	.main {
 		margin: 5vw;
 		width: 40vw;
-		font-family: serif;
 	}
-
 	h2 {
 		margin-bottom: -0.6vw;
 	}
-
 	#toreadme {
 		font-size: small;
 		margin-top: -2vh;
 	}
-
 	a {
 		text-decoration: none;
 	}
-
+	#generatedCommand {
+		margin: 5vw;
+		width: 60vw;
+	}
 	code {
 		padding: 0.2vw;
 		background-color: gray;
 		border-radius: 0.3vw;
 		font-family: monospace;
+		word-wrap: break-word;
 	}
-
 	details {
 		padding-top: 2vh;
 	}
-
 	th {
 		background-color: gray;
 	}
-
 	td {
 		padding-right: 1vw;
 	}
-
 </style>
