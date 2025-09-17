@@ -2,7 +2,7 @@
 
 For Minecrafters who like to make banners, this simple tool helps to generate `/give` commands.
 
-Go to the page [here](https://ashervahalik.github.io/minecraft-banner-helper).
+You can access the page [here](https://ashervahalik.github.io/minecraft-banner-helper).
 
 ### Lookup
 
